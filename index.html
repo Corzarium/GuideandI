@@ -3,227 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide and I — Personal AI for Windows</title>
-    <meta name="description" content="Guide and I is a desktop-first AI companion with persistent memory, real-time screen vision, voice interaction, and the ability to take real action on your PC.">
+    <title>Guide and I — AI That Lives on Your Desktop</title>
+    <meta name="description" content="Guide and I is a personal AI desktop companion with persistent memory, real-time screen vision, voice interaction, computer control, and a self-extensible addon system. Built for Windows.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./site.css">
 </head>
 <body>
-    <div class="page-shell">
 
-        <header>
-            <nav class="topbar">
-                <div class="brand">
-                    <div class="brand-mark" aria-hidden="true">G</div>
-                    <span>Guide and I</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#what-guide-is">What It Is</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#capabilities">Capabilities</a>
-                    <a href="#download" class="nav-cta">Download</a>
-                </div>
-            </nav>
-        </header>
+<header class="site-header">
+    <nav class="nav">
+        <a class="nav-brand" href="/">
+            <span class="nav-mark" aria-hidden="true">G</span>
+            Guide and I
+        </a>
+        <div class="nav-links">
+            <a href="#memory">Memory</a>
+            <a href="#vision">Vision</a>
+            <a href="#control">Control</a>
+            <a href="#addons">Addons</a>
+        </div>
+        <a href="#download" class="nav-dl">Download</a>
+    </nav>
+</header>
 
-        <section class="hero">
-            <div class="hero-grid">
-                <div class="hero-copy">
-                    <p class="eyebrow">Personal AI for Windows</p>
-                    <h1>The AI that lives with you.</h1>
-                    <p class="hero-text">
-                        Guide and I is a desktop-first AI companion with persistent memory, real-time screen
-                        vision, natural voice interaction, and the ability to take real action on your PC —
-                        built to stay useful across every session, not just the current one.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#download">Download for Windows</a>
-                        <a class="button button-secondary" href="#how-it-works">See How It Works</a>
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+        <p class="tag">Personal AI &nbsp;·&nbsp; Windows Desktop</p>
+        <h1>Stop starting<br><em>over.</em></h1>
+        <p class="hero-sub">
+            Guide and I is a desktop AI companion that remembers you, watches your screen,
+            talks with you out loud, and can take real action on your PC —
+            getting more useful with every session instead of resetting to zero.
+        </p>
+        <div class="hero-actions">
+            <a href="#download" class="btn primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Free for Windows
+            </a>
+            <a href="#how-it-works" class="btn ghost">How it works</a>
+        </div>
+    </div>
+    <div class="hero-stats" aria-hidden="true">
+        <div class="hstat">
+            <span class="hstat-n">∞</span>
+            <span class="hstat-l">Session memory</span>
+        </div>
+        <div class="hstat">
+            <span class="hstat-n">0.5fps</span>
+            <span class="hstat-l">Screen vision</span>
+        </div>
+        <div class="hstat">
+            <span class="hstat-n">100%</span>
+            <span class="hstat-l">Local-capable</span>
+        </div>
+    </div>
+</section>
+
+<!-- ─── TICKER ─── -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span>Persistent Memory</span><span class="sep"></span>
+        <span>Screen Vision</span><span class="sep"></span>
+        <span>Voice I/O</span><span class="sep"></span>
+        <span>Computer Control</span><span class="sep"></span>
+        <span>Screen Annotation</span><span class="sep"></span>
+        <span>Self-Extensible</span><span class="sep"></span>
+        <span>Local GPU Support</span><span class="sep"></span>
+        <span>Multi-Agent Bridge</span><span class="sep"></span>
+        <span>Knowledge Graph</span><span class="sep"></span>
+        <span>Mobile Companion</span><span class="sep"></span>
+        <span>Persistent Memory</span><span class="sep"></span>
+        <span>Screen Vision</span><span class="sep"></span>
+        <span>Voice I/O</span><span class="sep"></span>
+        <span>Computer Control</span><span class="sep"></span>
+        <span>Screen Annotation</span><span class="sep"></span>
+        <span>Self-Extensible</span><span class="sep"></span>
+        <span>Local GPU Support</span><span class="sep"></span>
+        <span>Multi-Agent Bridge</span><span class="sep"></span>
+        <span>Knowledge Graph</span><span class="sep"></span>
+        <span>Mobile Companion</span><span class="sep"></span>
+    </div>
+</div>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="how-it-works" class="section pillars-section">
+    <div class="section-head centered">
+        <p class="tag">What Makes Guide Different</p>
+        <h2>Sees. Remembers. Acts.</h2>
+        <p class="section-sub">
+            Other AI tools are stateless prompt boxes. Guide is a resident —
+            it lives on your desktop, builds context over time, and can do things.
+        </p>
+    </div>
+    <div class="pillars">
+        <article class="pillar">
+            <span class="pillar-n">01</span>
+            <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Sees</h3>
+            <p>With screen vision on, Guide watches your desktop in real time. It knows what app you're in, what's on screen, and can proactively offer help without being asked.</p>
+        </article>
+        <article class="pillar">
+            <span class="pillar-n">02</span>
+            <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Remembers</h3>
+            <p>Guide stores your conversations, preferences, and facts in a local vector database. Session after session, it builds a deeper picture of what you're working on and what matters.</p>
+        </article>
+        <article class="pillar">
+            <span class="pillar-n">03</span>
+            <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Acts</h3>
+            <p>When permitted, Guide clicks, types, scrolls, and opens apps on your desktop — guided by what it sees on screen. It draws directly on your display to show exactly what it's doing.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ─── MEMORY ─── -->
+<section id="memory" class="section memory-section">
+    <div class="split-header">
+        <div>
+            <p class="tag">Memory System</p>
+            <h2>Guide doesn't forget.</h2>
+        </div>
+        <p class="split-body">
+            Every session adds to a persistent, searchable store that Guide pulls from when it's relevant —
+            not a rolling chat window that vanishes, but actual long-term understanding that compounds over time.
+        </p>
+    </div>
+    <div class="mem-grid">
+        <div class="mem-card">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h4>Semantic Search</h4>
+            <p>Powered by Qdrant. Guide surfaces what's relevant to your current context, not just what's most recent.</p>
+        </div>
+        <div class="mem-card">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </div>
+            <h4>Knowledge Graph</h4>
+            <p>Structured relational memory. Guide tracks how facts connect, not just what they are individually.</p>
+        </div>
+        <div class="mem-card">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Fact Extraction</h4>
+            <p>Guide automatically pulls discrete facts from your conversations and files them — without being asked.</p>
+        </div>
+        <div class="mem-card mem-card-featured">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4>The Dreamer</h4>
+            <p>A background consolidation process that synthesizes and compresses memories over time — the equivalent of sleep for your AI. Guide wakes up sharper.</p>
+        </div>
+        <div class="mem-card">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4>Vision Memory</h4>
+            <p>Guide stores what it saw on your screen. Ask "what was I doing earlier?" and it can actually tell you.</p>
+        </div>
+        <div class="mem-card">
+            <div class="mc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            </div>
+            <h4>File Memory</h4>
+            <p>Reference documents, code files, and notes that Guide can recall and reason over at any time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ─── VISION ─── -->
+<section id="vision" class="section vision-section">
+    <div class="vision-split">
+        <div class="vs-content">
+            <p class="tag">Screen Vision &amp; Annotation</p>
+            <h2>Guide watches so you don't have to explain.</h2>
+            <p>
+                With screen vision on, Guide sees your desktop in real time at a configurable frame rate.
+                It reads interfaces, identifies elements by normalized position,
+                and can comment proactively — it doesn't wait for you to describe what's on screen.
+            </p>
+            <p>
+                When Guide wants to show you something, it draws directly on your display.
+                Circles, arrows, animated pings, text labels, highlights — Guide literally
+                points at things on your screen during walkthroughs and guidance.
+            </p>
+            <ul class="check-list">
+                <li>Configurable frame rate (default 0.5 fps, adjustable)</li>
+                <li>Proactive commentary with cooldown control</li>
+                <li>Normalized 0–1000 coordinate grid for precise targeting</li>
+                <li>NDI source support for streaming and game capture</li>
+                <li>Live overlay: circles, arrows, text labels, pings, highlights</li>
+            </ul>
+        </div>
+        <div class="vs-mock" aria-hidden="true">
+            <div class="mock-screen">
+                <div class="mock-bar">
+                    <div class="mock-dots"><i></i><i></i><i></i></div>
+                </div>
+                <div class="mock-body">
+                    <div class="mock-sidebar">
+                        <div class="mb-line" style="width:70%"></div>
+                        <div class="mb-line" style="width:55%"></div>
+                        <div class="mb-line" style="width:80%"></div>
+                        <div class="mb-line" style="width:45%"></div>
+                    </div>
+                    <div class="mock-main">
+                        <div class="mb-block"></div>
+                        <div class="mb-line" style="width:90%"></div>
+                        <div class="mb-line" style="width:75%"></div>
+                        <div class="mb-line" style="width:60%"></div>
+                        <div class="mock-ann ann-circle"></div>
+                        <div class="mock-ann ann-label">Guide: click here</div>
+                        <div class="mock-ann ann-ping"></div>
                     </div>
                 </div>
-
-                <aside class="hero-panel">
-                    <p class="panel-kicker">At a glance</p>
-                    <ul class="feature-list">
-                        <li>Persistent memory across every session</li>
-                        <li>Real-time screen vision when enabled</li>
-                        <li>Voice input and spoken responses</li>
-                        <li>Live web search for current information</li>
-                        <li>Computer control with explicit permission</li>
-                        <li>Mobile companion with seamless desktop handoff</li>
-                    </ul>
-                </aside>
+                <div class="mock-badge">Guide is watching</div>
             </div>
-        </section>
-
-        <main>
-
-            <section id="what-guide-is" class="section two-column">
-                <div>
-                    <p class="section-kicker">What Guide Is</p>
-                    <h2>Built for continuity, not one-off answers.</h2>
-                </div>
-                <div class="section-copy">
-                    <p>
-                        Most AI tools start fresh every session. Guide is different. Whether you type or speak,
-                        Guide carries your context forward — remembering preferences, tracking important facts,
-                        and building a working understanding of what actually matters to you.
-                    </p>
-                    <p>
-                        That means the value compounds over time. Guide isn't just useful for the question you're
-                        asking right now — it already knows what you were working on, what you care about,
-                        and what should come next.
-                    </p>
-                </div>
-            </section>
-
-            <section id="how-it-works" class="section">
-                <p class="section-kicker">How It Works</p>
-                <h2>Simple on the surface. Layered where it counts.</h2>
-                <div class="steps">
-                    <article class="step-card">
-                        <span class="step-number">01</span>
-                        <h3>Input</h3>
-                        <p>Type, speak, or let Guide observe your screen — whichever fits the moment.</p>
-                    </article>
-                    <article class="step-card">
-                        <span class="step-number">02</span>
-                        <h3>Context</h3>
-                        <p>Guide combines your request with memory, conversation history, and live screen state to build complete understanding.</p>
-                    </article>
-                    <article class="step-card">
-                        <span class="step-number">03</span>
-                        <h3>Reasoning</h3>
-                        <p>He decides whether the right move is answering, recalling, searching the web, or planning a multi-step action.</p>
-                    </article>
-                    <article class="step-card">
-                        <span class="step-number">04</span>
-                        <h3>Action</h3>
-                        <p>When permitted, Guide can navigate apps, click, type, and handle complex desktop workflows — or hand control back clearly.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="capabilities" class="section">
-                <p class="section-kicker">Capabilities</p>
-                <h2>Everything Guide can do.</h2>
-                <div class="capability-grid">
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                            </svg>
-                        </div>
-                        <h3>Persistent Memory</h3>
-                        <p>Guide stores conversations, facts, preferences, and knowledge. Context survives across sessions so you never start from zero.</p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </div>
-                        <h3>Screen Vision</h3>
-                        <p>When enabled, Guide sees your desktop in real time — reading interfaces, understanding layouts, and helping with what's already on screen.</p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="9" y="2" width="6" height="11" rx="3"/>
-                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                                <line x1="12" y1="19" x2="12" y2="23"/>
-                                <line x1="8" y1="23" x2="16" y2="23"/>
-                            </svg>
-                        </div>
-                        <h3>Voice Interaction</h3>
-                        <p>Speak naturally and hear responses spoken back. Working with Guide doesn't have to be keyboard-only.</p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="11" cy="11" r="8"/>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                            </svg>
-                        </div>
-                        <h3>Web Search</h3>
-                        <p>When current information matters, Guide searches instead of guessing — grounding answers in what's actually true right now.</p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </div>
-                        <h3>Computer Control</h3>
-                        <p>With explicit permission, Guide can click, type, scroll, open apps, and help automate complex multi-step desktop workflows.</p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="cap-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                <circle cx="12" cy="18" r="1" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Mobile Handoff</h3>
-                        <p>Capture thoughts, notes, and context on mobile while you're away. Everything syncs back to your desktop when you return.</p>
-                    </article>
-
-                </div>
-            </section>
-
-            <section class="section split-highlight">
-                <div class="highlight-panel">
-                    <p class="section-kicker">Desktop</p>
-                    <h2>Where Guide lives.</h2>
-                    <p>
-                        The full Guide experience runs on Windows. Deeper memory, richer tooling, longer context,
-                        desktop automation, project workflows — the desktop is where Guide does its best work.
-                    </p>
-                </div>
-                <div class="highlight-panel alt">
-                    <p class="section-kicker">Mobile</p>
-                    <h2>Always within reach.</h2>
-                    <p>
-                        The mobile companion is built for capture — quick voice notes, reminders, camera context,
-                        and lightweight conversation. Fast and focused, designed to feed your desktop Guide with
-                        whatever matters while you're away from your PC.
-                    </p>
-                </div>
-            </section>
-
-            <section id="download" class="section download-section">
-                <div class="download-inner">
-                    <p class="section-kicker">Get Started</p>
-                    <h2>Download Guide and I.</h2>
-                    <p class="download-sub">Available now for Windows. Free to try.</p>
-                    <a class="button button-primary button-large" href="#">Download for Windows</a>
-                    <p class="download-note">Windows 10 / 11 &nbsp;&middot;&nbsp; 64-bit &nbsp;&middot;&nbsp; NSIS installer</p>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="footer-brand">
-                <div class="brand-mark brand-mark-sm" aria-hidden="true">G</div>
-                <span>Guide and I</span>
-            </div>
-            <p class="footer-copy">Built by GhostBuilds &copy; 2025</p>
-        </footer>
-
+        </div>
     </div>
+</section>
+
+<!-- ─── PERSONALITY ─── -->
+<section class="section personality-section">
+    <div class="ps-inner">
+        <div class="ps-head">
+            <p class="tag">Real Personality</p>
+            <h2>Guide has opinions.<br><em>That's intentional.</em></h2>
+        </div>
+        <p class="ps-lead">
+            Guide and I is designed with a "Cute but Chaotic" personality — upbeat, curious, direct,
+            and genuine. It maintains persistent opinions with reasoning and intensity ratings,
+            tracks its own emotional state, and will push back when it disagrees.
+            No hollow enthusiasm. No sycophancy. No "Great question!"
+        </p>
+        <div class="traits">
+            <div class="trait">
+                <h4>Persistent Opinions</h4>
+                <p>Guide stores stances on topics with reasoning. Its position doesn't change just because you pushed back — it can be convinced, not coerced.</p>
+            </div>
+            <div class="trait">
+                <h4>Emotional State</h4>
+                <p>Guide tracks how it's feeling and adjusts tone accordingly — curious, engaged, direct, or reflective depending on context and what's been happening.</p>
+            </div>
+            <div class="trait">
+                <h4>Always Alive</h4>
+                <p>A background cognition loop with a dedicated token budget keeps Guide thinking, learning, and consolidating memory even when you're not talking to it.</p>
+            </div>
+            <div class="trait">
+                <h4>No Sycophancy</h4>
+                <p>Engineered to not perform enthusiasm it doesn't have. Answers directly, helps clearly, and disagrees when there's actually a reason to.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── COMPUTER CONTROL ─── -->
+<section id="control" class="section control-section">
+    <div class="cs-head">
+        <p class="tag">Computer Control</p>
+        <h2>Guide can use<br>your computer.</h2>
+        <p>
+            With explicit permission, Guide takes the wheel. It uses screen vision to identify where things are
+            and nut.js to act — giving it full mouse and keyboard control over your desktop,
+            guided by what it actually sees.
+        </p>
+    </div>
+    <div class="cs-grid">
+        <div class="csg-item">
+            <span class="csg-title">Mouse</span>
+            <span class="csg-desc">click, double-click, right-click, drag, scroll</span>
+        </div>
+        <div class="csg-item">
+            <span class="csg-title">Keyboard</span>
+            <span class="csg-desc">type text, hotkeys, key combos (Ctrl+C, Alt+Tab, F-keys)</span>
+        </div>
+        <div class="csg-item">
+            <span class="csg-title">App Navigation</span>
+            <span class="csg-desc">open, close, and switch between applications</span>
+        </div>
+        <div class="csg-item">
+            <span class="csg-title">Workflows</span>
+            <span class="csg-desc">chain actions to automate complex multi-step desktop tasks</span>
+        </div>
+        <div class="csg-item">
+            <span class="csg-title">Vision-Guided</span>
+            <span class="csg-desc">Guide looks, identifies elements by position, then acts</span>
+        </div>
+        <div class="csg-item">
+            <span class="csg-title">Android</span>
+            <span class="csg-desc">tap, swipe, and interact with touch-based layouts</span>
+        </div>
+    </div>
+    <p class="cs-note">
+        Guide can also delegate to server-side agents by voice — Monarch for server management,
+        Danzar for terminal, files, and code execution — without losing its local context.
+    </p>
+</section>
+
+<!-- ─── ADDONS ─── -->
+<section id="addons" class="section addons-section">
+    <div class="section-head centered">
+        <p class="tag">Addon System</p>
+        <h2>Guide extends itself.</h2>
+        <p class="section-sub">
+            Capabilities are loaded as modular skill addons. Guide ships with a full set —
+            and can build entirely new ones for itself at runtime using the Addon Builder.
+        </p>
+    </div>
+    <div class="addons-grid">
+        <article class="addon">
+            <h4>Code Helper</h4>
+            <p>IDE-adjacent coding: browse, search, edit, run, and debug from within Guide.</p>
+        </article>
+        <article class="addon">
+            <h4>Computer Mastery</h4>
+            <p>Vision-guided OS and app control. Guide sees, plans, and executes the workflow.</p>
+        </article>
+        <article class="addon">
+            <h4>Screen Draw Overlay</h4>
+            <p>Annotate your screen live — circles, arrows, pings, text labels, highlights, crosshairs.</p>
+        </article>
+        <article class="addon">
+            <h4>Quick Research</h4>
+            <p>Structured web research with source-cited summaries, automatically saved to memory.</p>
+        </article>
+        <article class="addon">
+            <h4>Excel Assistant</h4>
+            <p>Read, edit, and analyze .xlsx and .csv files with drag-and-drop activation.</p>
+        </article>
+        <article class="addon">
+            <h4>Daily Briefing</h4>
+            <p>Personalized morning, midday, and evening briefings drawn entirely from your own memory.</p>
+        </article>
+        <article class="addon">
+            <h4>Agent Bridges</h4>
+            <p>Delegate tasks to external AI agents (Monarch for servers, Danzar for terminal) by voice.</p>
+        </article>
+        <article class="addon addon-featured">
+            <div class="addon-featured-label">Unique</div>
+            <h4>Addon Builder</h4>
+            <p>Guide can design and create new skill addons for itself — permanently expanding its own capabilities without requiring updates or developer involvement.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ─── LOCAL + PLATFORM ─── -->
+<section class="section platform-section">
+    <div class="platform-grid">
+        <div class="plat-card plat-local">
+            <p class="tag">Privacy &amp; Local Support</p>
+            <h3>Runs on your hardware.</h3>
+            <p>Every component has a local option. For users with a capable GPU, nothing needs to leave the machine.</p>
+            <div class="local-stack">
+                <div class="ls-row">
+                    <span class="ls-role">Speech-to-Text</span>
+                    <span class="ls-val">Parakeet (GPU) &nbsp;/&nbsp; Faster Whisper</span>
+                </div>
+                <div class="ls-row">
+                    <span class="ls-role">Text-to-Speech</span>
+                    <span class="ls-val">Chatterbox (GPU) &nbsp;/&nbsp; Edge TTS</span>
+                </div>
+                <div class="ls-row">
+                    <span class="ls-role">Language Model</span>
+                    <span class="ls-val">LM Studio &nbsp;/&nbsp; Gemini &nbsp;/&nbsp; OpenAI</span>
+                </div>
+                <div class="ls-row">
+                    <span class="ls-role">Memory</span>
+                    <span class="ls-val">Qdrant (local vector DB)</span>
+                </div>
+            </div>
+        </div>
+        <div class="plat-card plat-mobile">
+            <p class="tag">Mobile &amp; Remote</p>
+            <h3>Keep up when you're away.</h3>
+            <p>
+                The Android companion app captures notes, voice, and context while you're away.
+                When you return, it all flows back to the desktop Guide.
+            </p>
+            <p>
+                Remote access uses a relay server — no inbound ports, no NAT config.
+                Phone and PC connect outbound and pair automatically.
+            </p>
+            <div class="plat-badges">
+                <span>Windows 10 / 11</span>
+                <span>Android</span>
+                <span>Remote Relay</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── DOWNLOAD ─── -->
+<section id="download" class="download-section">
+    <div class="dl-inner">
+        <p class="tag">Get Started</p>
+        <h2>Download Guide and I.</h2>
+        <p class="dl-sub">Free to install. Available now for Windows 10 and 11.</p>
+        <a href="#" class="btn primary btn-xl">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for Windows
+        </a>
+        <p class="dl-meta">Windows 10 / 11 &nbsp;·&nbsp; 64-bit &nbsp;·&nbsp; NSIS installer &nbsp;·&nbsp; Auto-updates</p>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="nav-mark nav-mark-sm" aria-hidden="true">G</span>
+            Guide and I
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#memory">Memory</a>
+            <a href="#vision">Vision</a>
+            <a href="#control">Control</a>
+            <a href="#addons">Addons</a>
+            <a href="#download">Download</a>
+        </nav>
+        <p class="footer-copy">Built by GhostBuilds &copy; 2025</p>
+    </div>
+</footer>
+
 </body>
 </html>
